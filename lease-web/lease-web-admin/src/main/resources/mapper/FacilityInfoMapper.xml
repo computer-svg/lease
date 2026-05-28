@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tc.lease.web.admin.mapper.FacilityInfoMapper">
+
+    <select id="selectListByApartmentId" resultType="com.tc.lease.model.entity.FacilityInfo">
+
+        select id, name, type
+        from facility_info
+        where is_deleted = 0
+          and id in (select facility_id
+                     from apartment_facility
+                     where apartment_id = #{apartmentId}
+                       and is_deleted = 0)
+    </select>
+</mapper>
