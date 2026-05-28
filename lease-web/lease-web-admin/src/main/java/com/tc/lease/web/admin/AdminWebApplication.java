@@ -10,4 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AdminWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminWebApplication.class, args);}
+
+
 }
