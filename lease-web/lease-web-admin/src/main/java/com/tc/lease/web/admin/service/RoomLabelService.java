@@ -1,7 +1,10 @@
 package com.tc.lease.web.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tc.lease.model.entity.LabelInfo;
 import com.tc.lease.model.entity.RoomLabel;
+
+import java.util.List;
 
 /**
 * @author liubo
@@ -9,5 +12,6 @@ import com.tc.lease.model.entity.RoomLabel;
 * @createDate 2023-07-24 15:48:00
 */
 public interface RoomLabelService extends IService<RoomLabel> {
+
 
 }

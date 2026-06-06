@@ -14,4 +14,13 @@
                      where apartment_id = #{apartmentId}
                        and is_deleted = 0)
     </select>
+    <select id="listLabelInfoByRoomId" resultType="com.tc.lease.model.entity.LabelInfo">
+        select id, type, name
+        from label_info
+        where is_deleted = 0
+          and id in (select label_id
+                     from room_label
+                     where room_id = #{roomId}
+                       and is_deleted = 0)
+    </select>
 </mapper>

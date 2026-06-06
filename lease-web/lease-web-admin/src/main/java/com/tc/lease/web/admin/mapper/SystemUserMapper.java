@@ -1,7 +1,10 @@
 package com.tc.lease.web.admin.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.tc.lease.model.entity.SystemUser;
+import com.tc.lease.web.admin.vo.system.user.SystemUserItemVo;
+import com.tc.lease.web.admin.vo.system.user.SystemUserQueryVo;
 
 /**
 * @author liubo
@@ -11,6 +14,7 @@ import com.tc.lease.model.entity.SystemUser;
 */
 public interface SystemUserMapper extends BaseMapper<SystemUser> {
 
+    IPage<SystemUserItemVo> pageSystemUserItemByQuery(IPage<SystemUserItemVo> page, SystemUserQueryVo queryVo);
 }
 
 

@@ -1,9 +1,12 @@
 package com.tc.lease.web.admin.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tc.lease.model.entity.UserInfo;
 import com.tc.lease.web.admin.mapper.UserInfoMapper;
 import com.tc.lease.web.admin.service.UserInfoService;
+import com.tc.lease.web.admin.vo.user.UserInfoQueryVo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,6 +17,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo>
     implements UserInfoService{
+    @Autowired
+    private UserInfoMapper userInfoMapper;
+
+
 
 }
 

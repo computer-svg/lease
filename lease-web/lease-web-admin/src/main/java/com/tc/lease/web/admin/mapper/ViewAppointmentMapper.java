@@ -1,7 +1,10 @@
 package com.tc.lease.web.admin.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.tc.lease.model.entity.ViewAppointment;
+import com.tc.lease.web.admin.vo.appointment.AppointmentQueryVo;
+import com.tc.lease.web.admin.vo.appointment.AppointmentVo;
 
 /**
 * @author liubo
@@ -11,6 +14,7 @@ import com.tc.lease.model.entity.ViewAppointment;
 */
 public interface ViewAppointmentMapper extends BaseMapper<ViewAppointment> {
 
+    IPage<AppointmentVo> pageAppointmentByQuery(IPage<AppointmentVo> page, AppointmentQueryVo queryVo);
 }
 
 

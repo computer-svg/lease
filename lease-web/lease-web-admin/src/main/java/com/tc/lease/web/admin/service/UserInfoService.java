@@ -1,7 +1,9 @@
 package com.tc.lease.web.admin.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.tc.lease.model.entity.UserInfo;
+import com.tc.lease.web.admin.vo.user.UserInfoQueryVo;
 
 /**
 * @author liubo
@@ -9,5 +11,6 @@ import com.tc.lease.model.entity.UserInfo;
 * @createDate 2023-07-24 15:48:00
 */
 public interface UserInfoService extends IService<UserInfo> {
+
 
 }

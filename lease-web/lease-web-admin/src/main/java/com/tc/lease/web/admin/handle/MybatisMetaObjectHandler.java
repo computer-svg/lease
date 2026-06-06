@@ -1,4 +1,4 @@
-package com.tc.lease.web.admin.config;
+package com.tc.lease.web.admin.handle;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;

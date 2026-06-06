@@ -2,6 +2,9 @@ package com.tc.lease.web.admin.mapper;
 
 import com.tc.lease.model.entity.AttrValue;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.tc.lease.web.admin.vo.attr.AttrValueVo;
+
+import java.util.List;
 
 /**
 * @author liubo
@@ -12,6 +15,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 public interface AttrValueMapper extends BaseMapper<AttrValue> {
 
     void deleteByAttrKeyId(Long attrKeyId);
+
+    List<AttrValueVo> listAttrValueByRoomId(Long id);
 }
 
 

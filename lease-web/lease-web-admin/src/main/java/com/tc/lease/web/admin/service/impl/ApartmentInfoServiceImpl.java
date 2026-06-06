@@ -1,6 +1,7 @@
 package com.tc.lease.web.admin.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tc.lease.model.entity.*;
@@ -9,6 +10,8 @@ import com.tc.lease.model.enums.ReleaseStatus;
 import com.tc.lease.web.admin.mapper.*;
 import com.tc.lease.web.admin.service.*;
 import com.tc.lease.web.admin.vo.apartment.ApartmentDetailVo;
+import com.tc.lease.web.admin.vo.apartment.ApartmentItemVo;
+import com.tc.lease.web.admin.vo.apartment.ApartmentQueryVo;
 import com.tc.lease.web.admin.vo.apartment.ApartmentSubmitVo;
 import com.tc.lease.web.admin.vo.fee.FeeValueVo;
 import com.tc.lease.web.admin.vo.graph.GraphVo;
@@ -28,6 +31,9 @@ import java.util.List;
 @Service
 public class ApartmentInfoServiceImpl extends ServiceImpl<ApartmentInfoMapper, ApartmentInfo>
         implements ApartmentInfoService {
+
+    @Autowired
+    private ApartmentInfoMapper apartmentInfoMapper;
 
     @Autowired
     private ApartmentFacilityService apartmentFacilityService;
@@ -185,6 +191,11 @@ public class ApartmentInfoServiceImpl extends ServiceImpl<ApartmentInfoMapper, A
         graphQueryWrapper.eq(GraphInfo::getItemId,  id);
         graphInfoService.remove(graphQueryWrapper);
 
+    }
+
+    @Override
+    public IPage<ApartmentItemVo> pageApartmentItem(IPage<ApartmentItemVo> page, ApartmentQueryVo queryVo) {
+        return apartmentInfoMapper.pageApartmentItem(page, queryVo);
     }
 
 

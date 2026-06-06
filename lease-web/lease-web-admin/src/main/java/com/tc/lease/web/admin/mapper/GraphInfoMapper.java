@@ -20,6 +20,7 @@ public interface GraphInfoMapper extends BaseMapper<GraphInfo> {
     @Select("SELECT name, url FROM graph_info WHERE item_type = #{itemType} AND item_id = #{itemId}")
     List<GraphVo> selectListByItemTypeAndId(@Param("itemType") ItemType itemType, @Param("itemId") Long itemId);
 
+    List<GraphVo> listByItemTypeAndId(ItemType itemType, Long id);
 }
 
 

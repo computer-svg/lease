@@ -22,7 +22,6 @@
         <module>lease-common</module>
         <module>lease-model</module>
         <module>lease-web</module>
-        <module>lease-demo</module>
     </modules>
 
     <!-- 注意：直接替换pom文件中原有的properties -->
@@ -48,7 +47,6 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
             <!--knife4j文档-->
             <!--官方文档：https://doc.xiaominfo.com/docs/quick-start -->
             <dependency>
@@ -56,7 +54,6 @@
                 <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
             </dependency>
-
             <!--JWT登录认证相关-->
             <!--官方文档：https://github.com/jwtk/jjwt#install-jdk-maven -->
             <dependency>
